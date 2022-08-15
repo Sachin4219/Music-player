@@ -79,6 +79,8 @@ const music = [
 	}
 ]
 
+
+
 const thumbnail = document.querySelector(".thumbnail img");
 const title = document.querySelector("#title")
 const artist = document.querySelector("#singer")
@@ -97,7 +99,7 @@ const audio  = document.querySelector("audio");
 const listLength = music.length;
 const playicon = "fa-circle-play";
 const pauseicon = "fa-circle-pause";
-
+const stroke = document.querySelector(".animation");
 
 var currTrack = 0
 var startTime
@@ -131,6 +133,7 @@ function playpause(){
 		playing = false
 		play.classList.remove(playicon)
 		play.classList.add(pauseicon)
+		stroke.style.visibility = "visible"
 		thumbnail.style.animationPlayState = "running"
 		audio.play()
 	}
@@ -138,6 +141,7 @@ function playpause(){
 		playing = true
 		play.classList.remove(pauseicon)	
 		play.classList.add(playicon)
+		stroke.style.visibility = "hidden"
 		thumbnail.style.animationPlayState = "paused"
 		audio.pause()
 	}
