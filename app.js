@@ -147,7 +147,7 @@ function playpause(){
 	}
 }
 function randomTrack(){
-	currTrack = Math.round(Math.random() * trackLength)
+	currTrack = Math.floor(Math.random() * trackLength)
 	setTrack()
 }
 
