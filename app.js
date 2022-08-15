@@ -166,7 +166,7 @@ function changeVolume(step){
 }
 
 setTrack()
-
+setVolume()
 
 function seekTo(){
 	let temp = (currTime.value/100)*trackLength
