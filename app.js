@@ -180,4 +180,4 @@ function setTime(){
 	currTime.value = 100*(audio.currentTime / trackLength)
 }
 
-setInterval( setTime, 100)
+setInterval( setTime, 500)
