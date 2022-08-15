@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>A Musinator</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div id="main">
+		<div class="top-section">
+			<div class="thumbnail">
+				<img src="./thumbnails/Eminem.jpeg">
+			</div>
+			<h2 id="title">Rap God</h2>
+			<h3 id="singer">Eminem</h3>
+		</div>
+		<div>
+			<div class="time-control">
+				<span class="elapsedTime"></span>
+				<input type="range" name="music time" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()" step="1">
+				<span class="totalTime"></span>
+			</div>
+			<div class="volume-control">
+				<div onclick="changeVolume(-1)">
+					<i class="fa-solid fa-volume-low"></i>
+				</div>
+				<input type="range" class="volumeBar" name="volume" min="0" max="10" step="1" onchange="setVolume()">
+				<div onclick="changeVolume(1)">
+					<i class="fa-solid fa-volume-high"></i>
+				</div>
+			</div>
+		</div>
+		<div class="buttons">
+			<audio src="./music/8 bits.mp3" type="audio/mpeg" autoplay></audio>
+			<div class="shuffle" onclick="randomTrack()">
+				<i class="fa-solid fa-shuffle"></i>
+			</div>
+			<div class="previous" onclick="changeTrack(-1)">
+				<i class="fa-solid fa-backward-step"></i>
+			</div>
+			<div class="play" onclick="playpause()">
+				<i class="fa-solid fa-circle-play"></i>
+			</div>
+			<div class="next" onclick="changeTrack(1)">
+				<i class="fa-solid fa-forward-step"></i>
+			</div>
+			<div class="replay" onclick="changeTrack(0)">
+				<i class="fa-solid fa-arrow-rotate-right replay"></i>
+			</div>
+		</div>
+		<div class="animation">
+			<div class="stroke"></div>
+			<div class="stroke"></div>
+			<div class="stroke"></div>
+			<div class="stroke"></div>
+			<div class="stroke"></div>
+			<div class="stroke"></div>
+			<div class="stroke"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="./app.js"></script>
+</html>
